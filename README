@@ -1,0 +1,30 @@
+Problem  Life on a Chip
+
+In future, water will be a scarce resource and most of the humans will have to generate water
+on their own.
+For this purpose, a chip was developed that will combine Hydrogen and Oxygen to make
+water. This chip
+has n sites where the reaction will take place, and each reaction will generate 1 E Mj of
+energy. For safety
+purpose, no two consecutive sites should be used for the reaction, and total energy generation
+at any moment
+should not exceed than some threshold value. As for reaction, each hydrogen atom must
+combine with another hydrogen atom and an oxygen atom at a site.
+For the purpose of this problem, each atom can be assumed to be a thread, which will be in
+sleep state and at every state of reaction you have to wake up the corresponding threads
+(atom) at particular site, and join them. Assume that a reaction take sleep (3) time to
+complete.
+
+Your task is to write an algorithm using semaphores, which efficiently uses atoms, and gives
+a faster way to generate water.
+
+Input:
+./a.out <No of H atoms> <No of O atoms> <No of sites> <Threshold Energy(in
+Units)>
+./a.out 12 6 3 2
+
+Output:
+Write lines, such that ith line represents a reaction giving the details of site and total
+energy generated. Each line also specifies number of H and O atoms left (indexing
+from 1 to m)
+
